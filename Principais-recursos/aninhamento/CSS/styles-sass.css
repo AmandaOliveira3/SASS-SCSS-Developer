@@ -1,0 +1,55 @@
+.parent {
+  background-color: paleblue;
+  padding: 1rem;
+}
+.parent .child {
+  background-color: aquamarine;
+}
+.parent .child li {
+  background-color: pink;
+}
+
+.parent > li {
+  border: 2px dashed blue;
+}
+
+.box {
+  width: 250px;
+  border: 2px solid black;
+  background-color: plum;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 768px) {
+  .box {
+    background-color: palegreen;
+  }
+}
+@media (min-width: 992px) {
+  .box {
+    background-color: yellow;
+  }
+}
+
+.nesting {
+  background-color: purple;
+}
+.nesting .item {
+  color: white;
+}
+.nesting-sublist {
+  background-color: plum;
+}
+.nesting-sublist .subitem {
+  color: purple;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #E94D5F;
+}
+a .title {
+  color: blue;
+}
+
+/*# sourceMappingURL=styles-sass.css.map */
