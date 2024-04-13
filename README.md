@@ -10,7 +10,8 @@ Codigos e projetos realizados durante o curso "Pré-processadores CSS: Explorand
 - Principais recursos do SASS 
     - Armazenando Valores em Variáveis
     - Aninhando Seletores (Nesting)
-    - Modularizando com Partials
-    -Herdando Estilos com Extends
-    -Reutilizando Estilos com Mixins
+    - Modularizando com 
+    - Herdando Estilos com Extends
+    - Reutilizando Estilos com Mixins 
+    
 

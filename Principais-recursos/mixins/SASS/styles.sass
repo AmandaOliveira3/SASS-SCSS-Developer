@@ -1,0 +1,69 @@
+@mixin reset-list
+    margin: 0
+    padding: 0
+    list-style: none
+
+nav ul 
+    @include reset-list
+
+// mixin com argumwtnos obrigatórios
+
+@mixin flex-container($direction, $justify, $algin)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $algin
+
+.argumento-obrigatorio
+    @include flex-container(row, center, center)
+
+// mixin com argumwtnos opcionais
+
+@mixin flex-container2($direction: column, $justify: center, $algin: center)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $algin
+
+.argumento-opcional
+    @include flex-container2()
+
+// mixin com argumwtnos de Palavre-chave 
+
+@mixin flex-container3($direction: column, $justify: center, $align: center)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
+
+.argumento-palavra-chave
+    @include flex-container3(row, $align: center, $justify: center)
+
+// Bloco de conteudo
+
+@mixin message-shared($color)
+    color: $color
+    border: 1px solid black
+
+    &:hover
+        @content
+
+.sucess
+    @include message-shared(#805099)
+        border-color: green
+
+.warning
+    @include message-shared(#FF3400)
+        border-color: yellow
+        color: black
+
+// mixins com argumentos arbitrarios
+
+@mixin button-style($color,$properties...)
+    border-radius: 50rem
+
+    @each $property in $properties
+        #{$properties}: $color
+
+button
+    @include button-style(purple,color,border-color,background-color)
