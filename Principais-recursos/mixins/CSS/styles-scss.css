@@ -1,0 +1,52 @@
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.argumento-obrigatorio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.argumento-opcional {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.argumento-palavra-chave {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sucess {
+  color: #805099;
+  border: 1px solid black;
+}
+.sucess:hover {
+  border-color: green;
+}
+
+.warning {
+  color: #FF3400;
+  border: 1px solid black;
+}
+.warning:hover {
+  border-color: yellow;
+  color: black;
+}
+
+button {
+  border-radius: 50rem;
+  color, border-color, background-color: purple;
+  color, border-color, background-color: purple;
+  color, border-color, background-color: purple;
+}
+
+/*# sourceMappingURL=styles-scss.css.map */
