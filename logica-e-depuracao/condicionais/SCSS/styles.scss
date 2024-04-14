@@ -1,0 +1,48 @@
+@mixin button-style($type) {
+    background-color: lightcyan;
+    color: white;
+
+    @if $type ==rounded {
+        border-radius: 50%;
+    }
+
+    @else {
+        border-radius: 0.5rem;
+    }
+}
+
+
+button {
+    @include button-style(square)
+}
+
+@mixin font-style($size: small) {
+
+    @if $size ==large {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    @else if size==medium {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    @else {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+
+.title {
+    @include font-style(large);
+}
+
+.paragraph {
+    @include font-style(medium);
+}
+
+.note {
+    @include font-style;
+}

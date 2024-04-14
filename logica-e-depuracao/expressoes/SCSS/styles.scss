@@ -1,0 +1,40 @@
+p {
+    font-size: 1rem;
+    z-index: 2;
+}
+
+span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+//Listas no SASS comecam em 1 não em 0
+
+$colors: red, green, blue;
+
+h1 {
+    color: nth($colors, 2);
+
+}
+
+$font-sizes: (
+    small: 12px,
+    medium: 16px,
+    large: 20px
+);
+
+h2{
+    font-size: map-get($font-sizes, medium);
+}
+
+
+// Operações
+
+@debug 10px == 10px;
+@debug 10px != 10px;
+@debug 5px * 2px;
+@debug 5px * 2;
+@debug sans- + serif;
+
+
+@debug true or false;

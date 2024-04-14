@@ -1,0 +1,22 @@
+button {
+  background-color: lightcyan;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.paragraph {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles-scss.css.map */
