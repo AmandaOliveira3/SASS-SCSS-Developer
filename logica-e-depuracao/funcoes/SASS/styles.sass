@@ -1,0 +1,49 @@
+@use 'sass:list'
+@use 'sass:map'
+@use 'sass:math'
+
+$color1: #10cf5f
+$color2: #8f009a
+
+$font-weights: 400, 500, 700
+
+$font-weights2: (regular: 400,medium: 500,bold: 700)
+
+h1
+    font-weight: list.nth($font-weights, 3)
+
+h2
+    font-weight: map.get($font-weights2, medium)
+
+div
+    width: math.div(200px, 2)
+
+
+.box
+    display: inline-block
+    width: 120px
+    margin: 5px 3px
+    border: 2px solid black
+    aspect-ratio: 1/1
+
+    &-1  
+        background-color: $color1
+    &-2  
+        background-color: $color2
+
+    &.darken
+        background-color: darken($color1, 20%)
+
+    &.lighten
+        background-color: lighten($color1, 10%)
+
+    &.mixed
+        background-color: mix($color1, $color2, 50%)
+
+@function generateBoxShadow($x, $y, $blur, $color)
+    $box-shadow: #{$x}px #{$y}px #{$blur}px #{$color}
+
+    @return $box-shadow
+
+.mixed
+    box-shadow: generateBoxShadow(2, 3, 4, rgba(0, 0, 0, 0.8))
