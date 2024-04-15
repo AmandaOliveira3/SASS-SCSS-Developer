@@ -1,38 +1,9 @@
-@use 'base/typography';
-@use 'base/reset';
+@use 'base';
 @use 'layout';
+@use './base/mixins';
 
-@media only screen and (max-width: 950px) {
-    .card-login {
-        width: 85%;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
+@include mixins.media-break-min(medium) {
     .main-login {
         flex-direction: column;
-    }
-
-    .left-login>h1 {
-        display: none;
-    }
-
-    .left-login {
-        width: 100%;
-        height: auto;
-    }
-
-    .right-login {
-        width: 100%;
-        height: auto;
-    }
-
-    .left-image {
-        width: 60vw;
-    }
-
-    .card-login {
-        width: 90%;
     }
 }

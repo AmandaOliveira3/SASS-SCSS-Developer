@@ -1,20 +1,15 @@
-@mixin flex($flex-direction: column, $justify-content: center, $align-item: center) {
-    display: flex;
-    justify-content: $justify-content;
-    flex-direction: $flex-direction;
-    align-items: $align-item;
-}
+@use '../base/_mixins';
 
 .right-login {
     width: 50vw;
     height: 100vh;
-    @include flex;
+    @include mixins.flex;
 }
 
 
 .card-login {
-    width: 60%;
-    @include flex;
+    width: max(65%,400px);
+    @include mixins.flex;
     padding: 30px 35px;
     background: #2f2846;
     border-radius: 20px;
@@ -31,7 +26,7 @@
 
 .textfield {
     width: 100%;
-    @include flex(column, center, flex-start);
+    @include mixins.flex(column, center, flex-start);
     margin: 10px 0px;
 
     &>input {
@@ -78,5 +73,21 @@
 
     &:active {
         background: #00ff6b;
+    }
+}
+
+@include mixins.media-break-min(large) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@include mixins.media-break-min(medium) {
+    .card-login {
+        width: 90%;
+    }
+    .right-login {
+        width: 100%;
+        height: auto;
     }
 }
