@@ -1,0 +1,82 @@
+@mixin flex($flex-direction: column, $justify-content: center, $align-item: center) {
+    display: flex;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+    align-items: $align-item;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    @include flex;
+}
+
+
+.card-login {
+    width: 60%;
+    @include flex;
+    padding: 30px 35px;
+    background: #2f2846;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #101010;
+
+    &>h1 {
+        font-weight: 800;
+        color: #00ff88;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+}
+
+.textfield {
+    width: 100%;
+    @include flex(column, center, flex-start);
+    margin: 10px 0px;
+
+    &>input {
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        background: #514869;
+        color: #f0f0ff;
+        font-size: 12pt;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    &>label {
+        color: #f0ffff;
+        margin-bottom: 10px;
+    }
+
+    &>input ::placeholder {
+        color: #f0ffff;
+    }
+}
+
+
+.btn-login {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 800;
+    font-size: 13pt;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+
+    &:hover {
+
+        box-shadow: 0px 10px 40px -12px #00ff88;
+    }
+
+    &:active {
+        background: #00ff6b;
+    }
+}

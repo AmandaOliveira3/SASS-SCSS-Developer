@@ -1,20 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Righteous&display=swap");
-body {
-  margin: 0;
-  font-family: "Noto Sans", sans-serif;
-}
-
-body * {
+* {
   box-sizing: border-box;
-}
-
-.main-login {
-  width: 100vw;
-  height: 100vh;
-  background-color: #201b2c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 .left-login {
@@ -25,9 +14,8 @@ body * {
   justify-content: center;
   flex-direction: column;
 }
-
 .left-login > h1 {
-  color: #77ffc0;
+  color: #00ffaa;
 }
 
 .left-image {
@@ -39,6 +27,7 @@ body * {
   height: 100vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -46,63 +35,75 @@ body * {
   width: 60%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   padding: 30px 35px;
-  background: #2f2841;
+  background: #2f2846;
   border-radius: 20px;
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337254902);
+  box-shadow: 0px 10px 40px #101010;
 }
-
 .card-login > h1 {
   font-weight: 800;
   color: #00ff88;
+  letter-spacing: 2px;
   margin: 0;
 }
 
 .textfield {
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   margin: 10px 0px;
 }
-
 .textfield > input {
   width: 100%;
   border: none;
   border-radius: 10px;
   padding: 15px;
   background: #514869;
-  color: rgba(240, 255, 255, 0.8705882353);
+  color: #f0f0ff;
   font-size: 12pt;
   box-sizing: border-box;
   outline: none;
 }
-
 .textfield > label {
-  color: rgba(240, 255, 255, 0.8705882353);
+  color: #f0ffff;
   margin-bottom: 10px;
 }
-
 .textfield > input ::placeholder {
-  color: rgba(240, 255, 255, 0.5803921569);
+  color: #f0ffff;
 }
 
 .btn-login {
   width: 100%;
-  padding: 16px 0px;
+  padding: 14px 16px;
   margin: 25px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   outline: none;
-  cursor: pointer;
   font-weight: 800;
+  font-size: 13pt;
   letter-spacing: 3px;
   color: #2b134b;
   background: #00ff88;
-  box-shadow: 0px 10px 40px -12px rgba(0, 255, 128, 0.3215686275);
+  cursor: pointer;
+}
+.btn-login:hover {
+  box-shadow: 0px 10px 40px -12px #00ff88;
+}
+.btn-login:active {
+  background: #00ff6b;
+}
+
+.main-login {
+  width: 100vw;
+  height: 100vh;
+  background-color: #201b2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 950px) {

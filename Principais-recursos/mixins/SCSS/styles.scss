@@ -8,7 +8,7 @@ nav ul {
     @include reset-list;
 }
 
-// mixin com argumwtnos obrigatórios
+// mixin com argumentos obrigatórios
 
 @mixin flex-container($direction, $justify, $algin) {
     display: flex;
@@ -21,7 +21,7 @@ nav ul {
     @include flex-container(row, center, center);
 }
 
-// mixin com argumwtnos opcionais
+// mixin com argumentos opcionais
 
 @mixin flex-container2($direction: column, $justify: center, $algin: center) {
     display: flex;
@@ -34,7 +34,7 @@ nav ul {
     @include flex-container2();
 }
 
-// mixin com argumwtnos de Palavre-chave 
+// mixin com argumentos de Palavre-chave 
 
 @mixin flex-container3($direction: column, $justify: center, $align: center) {
     display: flex;
